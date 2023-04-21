@@ -28,7 +28,7 @@ class UserListResource(Resource):
         user = User(**data)
         user.save()
 
-        return user_schema.dump(user).data, HTTPStatus.CREATED
+        return user_schema.dump(user), HTTPStatus.CREATED
 
 
 class UserResources(Resource):
